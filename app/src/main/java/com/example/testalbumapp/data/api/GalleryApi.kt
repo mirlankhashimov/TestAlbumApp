@@ -1,10 +1,9 @@
-package com.example.testalbumapp.domain
+package com.example.testalbumapp.data.api
 
-import com.example.testalbumapp.domain.model.Album
-import com.example.testalbumapp.domain.model.Photo
+import com.example.testalbumapp.domain.entity.Album
+import com.example.testalbumapp.domain.entity.Photo
 import retrofit2.Response
 import retrofit2.http.GET
-import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface GalleryApi {

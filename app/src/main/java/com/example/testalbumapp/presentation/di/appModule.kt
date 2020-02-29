@@ -1,14 +1,15 @@
-package com.example.testalbumapp
+package com.example.testalbumapp.presentation.di
 
 import androidx.room.Room
-import com.example.testalbumapp.db.GalleryDatabase
-import com.example.testalbumapp.domain.GalleryApi
+import com.example.testalbumapp.BuildConfig
+import com.example.testalbumapp.data.db.GalleryDatabase
+import com.example.testalbumapp.data.api.GalleryApi
 import com.example.testalbumapp.domain.datasource.album.AlbumRemoteDataSource
 import com.example.testalbumapp.domain.datasource.photos.PhotoRemoteDataSource
-import com.example.testalbumapp.repo.AlbumRepository
-import com.example.testalbumapp.repo.PhotoRepository
-import com.example.testalbumapp.ui.album.AlbumViewModel
-import com.example.testalbumapp.ui.photos.PhotosViewModel
+import com.example.testalbumapp.domain.repo.AlbumRepository
+import com.example.testalbumapp.domain.repo.PhotoRepository
+import com.example.testalbumapp.presentation.album.AlbumViewModel
+import com.example.testalbumapp.presentation.photos.PhotosViewModel
 import com.google.gson.GsonBuilder
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -42,6 +43,8 @@ val appModule = module {
     }
 
     single { get<Retrofit>().create<GalleryApi>() }
+    single { get<GalleryDatabase>().photoDao() }
+    single { get<GalleryDatabase>().albumDao() }
     single { AlbumRepository(get(), get()) }
     single { PhotoRepository(get(), get()) }
     single { AlbumRemoteDataSource(get()) }

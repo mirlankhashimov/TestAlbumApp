@@ -3,8 +3,8 @@ package com.example.testalbumapp.domain.datasource.album
 import androidx.lifecycle.MutableLiveData
 import androidx.paging.DataSource
 import androidx.paging.PagedList
-import com.example.testalbumapp.db.GalleryDatabase
-import com.example.testalbumapp.domain.model.Album
+import com.example.testalbumapp.data.db.GalleryDatabase
+import com.example.testalbumapp.domain.entity.Album
 import kotlinx.coroutines.CoroutineScope
 
 class AlbumPageDataSourceFactory(

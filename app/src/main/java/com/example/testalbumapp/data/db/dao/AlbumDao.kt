@@ -1,8 +1,8 @@
-package com.example.testalbumapp.db.dao
+package com.example.testalbumapp.data.db.dao
 
 import androidx.paging.DataSource
 import androidx.room.*
-import com.example.testalbumapp.domain.model.Album
+import com.example.testalbumapp.domain.entity.Album
 
 @Dao
 interface AlbumDao {

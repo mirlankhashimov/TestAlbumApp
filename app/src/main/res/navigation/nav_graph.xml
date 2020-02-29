@@ -6,7 +6,7 @@
     app:startDestination="@id/fragment_album">
     <fragment
         android:id="@+id/fragment_album"
-        android:name="com.example.testalbumapp.ui.album.AlbumFragment"
+        android:name="com.example.testalbumapp.presentation.album.AlbumFragment"
         tools:layout="@layout/fragment_album">
 
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/screen_photo"
-        android:name="com.example.testalbumapp.ui.photos.PhotosFragment"
+        android:name="com.example.testalbumapp.presentation.photos.PhotosFragment"
         tools:layout="@layout/fragment_photo">
         <action
             android:id="@+id/action_photo_screen_to_detail_screen"
@@ -35,7 +35,7 @@
     </fragment>
     <fragment
         android:id="@+id/screen_detail"
-        android:name="com.example.testalbumapp.ui.photos.detail.PhotoFragment"
+        android:name="com.example.testalbumapp.presentation.photos.detail.PhotoFragment"
         tools:layout="@layout/fragment_detail">
         <argument
             android:name="imageId"

@@ -1,4 +1,4 @@
-package com.example.testalbumapp.ui.photos.detail
+package com.example.testalbumapp.presentation.photos.detail
 
 import android.os.Bundle
 import android.view.View

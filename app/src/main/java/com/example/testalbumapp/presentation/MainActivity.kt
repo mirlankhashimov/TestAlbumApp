@@ -1,7 +1,8 @@
-package com.example.testalbumapp
+package com.example.testalbumapp.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.example.testalbumapp.R
 
 class MainActivity : AppCompatActivity() {
 

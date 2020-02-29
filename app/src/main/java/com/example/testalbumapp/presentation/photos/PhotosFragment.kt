@@ -1,17 +1,15 @@
-package com.example.testalbumapp.ui.photos
+package com.example.testalbumapp.presentation.photos
 
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.core.os.bundleOf
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.testalbumapp.core.BaseFragment
 import com.example.testalbumapp.R
-import com.example.testalbumapp.domain.model.Photo
+import com.example.testalbumapp.domain.entity.Photo
 import com.example.testalbumapp.utils.GridItemDecoration
 import com.example.testalbumapp.utils.Result
-import com.example.testalbumapp.utils.observe
 import kotlinx.android.synthetic.main.fragment_photo.*
 import org.koin.androidx.viewmodel.ext.android.viewModel
 

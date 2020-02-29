@@ -1,11 +1,11 @@
-package com.example.testalbumapp.db.dao
+package com.example.testalbumapp.data.db.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.testalbumapp.domain.model.Photo
+import com.example.testalbumapp.domain.entity.Photo
 
 @Dao
 interface PhotoDao {

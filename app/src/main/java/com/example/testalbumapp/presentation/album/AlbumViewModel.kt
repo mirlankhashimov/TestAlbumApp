@@ -1,10 +1,8 @@
-package com.example.testalbumapp.ui.album
+package com.example.testalbumapp.presentation.album
 
 import androidx.lifecycle.viewModelScope
 import com.example.testalbumapp.core.BaseViewModel
-import com.example.testalbumapp.repo.AlbumRepository
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.cancel
+import com.example.testalbumapp.domain.repo.AlbumRepository
 
 class AlbumViewModel(
     private val albumRepository: AlbumRepository

@@ -1,16 +1,14 @@
-package com.example.testalbumapp.ui.album
+package com.example.testalbumapp.presentation.album
 
 import android.os.Bundle
 import android.view.View
 import androidx.core.os.bundleOf
-import androidx.lifecycle.Observer
 import com.example.testalbumapp.core.BaseFragment
 import com.example.testalbumapp.R
-import com.example.testalbumapp.domain.model.Album
+import com.example.testalbumapp.domain.entity.Album
 import com.example.testalbumapp.utils.ConnectivityUtil
 import com.example.testalbumapp.utils.observe
 import kotlinx.android.synthetic.main.fragment_album.*
-import org.koin.android.ext.android.inject
 import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class AlbumFragment : BaseFragment(R.layout.fragment_album) {

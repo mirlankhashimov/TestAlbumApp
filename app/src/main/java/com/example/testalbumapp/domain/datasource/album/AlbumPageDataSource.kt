@@ -1,8 +1,8 @@
 package com.example.testalbumapp.domain.datasource.album
 
 import androidx.paging.PageKeyedDataSource
-import com.example.testalbumapp.db.GalleryDatabase
-import com.example.testalbumapp.domain.model.Album
+import com.example.testalbumapp.data.db.GalleryDatabase
+import com.example.testalbumapp.domain.entity.Album
 import com.example.testalbumapp.utils.Result
 import kotlinx.coroutines.CoroutineExceptionHandler
 import kotlinx.coroutines.CoroutineScope

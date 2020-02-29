@@ -1,31 +1,31 @@
-package com.example.testalbumapp.ui.photos
+package com.example.testalbumapp.presentation.album
 
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.TextView
+import androidx.paging.PagedListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.testalbumapp.R
-import com.example.testalbumapp.domain.model.Photo
 import com.example.testalbumapp.utils.diffItemCallback
 import com.example.testalbumapp.utils.inflate
-import com.squareup.picasso.Picasso
+import com.example.testalbumapp.domain.entity.Album
 
-class PhotosAdapter(
-    private val click: (Photo) -> Unit
+class AlbumAdapter(
+    private val click: (Album) -> Unit
 ) :
-    androidx.recyclerview.widget.ListAdapter<Photo, PhotosAdapter.ViewHolder>(
+    PagedListAdapter<Album, AlbumAdapter.ViewHolder>(
         diffItemCallback { it.first == it.second }
     ) {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int) =
-        ViewHolder(parent.inflate(R.layout.item_photo_list))
+        ViewHolder(parent.inflate(R.layout.item_album_list))
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) =
         holder.bind(getItem(position))
 
     inner class ViewHolder(v: View) : RecyclerView.ViewHolder(v) {
-        private val image: ImageView = itemView.findViewById(R.id.image)
-        fun bind(photo: Photo?) {
-            Picasso.get().load(photo?.thumbnailUrl).into(image)
+        private val name: TextView = itemView.findViewById(R.id.title)
+        fun bind(album: Album?) {
+            name.text = album?.title
             itemView.setOnClickListener {
                 click(getItem(adapterPosition) ?: return@setOnClickListener)
             }

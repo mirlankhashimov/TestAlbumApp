@@ -1,17 +1,13 @@
-package com.example.testalbumapp.repo
+package com.example.testalbumapp.domain.repo
 
 import androidx.lifecycle.LiveData
 import androidx.paging.LivePagedListBuilder
 import androidx.paging.PagedList
-import com.example.testalbumapp.db.GalleryDatabase
+import com.example.testalbumapp.data.db.GalleryDatabase
 import com.example.testalbumapp.domain.datasource.album.AlbumPageDataSourceFactory
 import com.example.testalbumapp.domain.datasource.album.AlbumRemoteDataSource
-import com.example.testalbumapp.domain.model.Album
+import com.example.testalbumapp.domain.entity.Album
 import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.coroutineScope
-import kotlinx.coroutines.delay
-import org.koin.core.KoinComponent
-import org.koin.core.inject
 
 class AlbumRepository(
     private val database: GalleryDatabase,

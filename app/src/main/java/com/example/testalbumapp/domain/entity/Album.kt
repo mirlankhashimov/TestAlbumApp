@@ -1,4 +1,4 @@
-package com.example.testalbumapp.domain.model
+package com.example.testalbumapp.domain.entity
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
